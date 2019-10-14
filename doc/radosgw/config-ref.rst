@@ -953,7 +953,7 @@ Barbican Settings
 HashiCorp Vault Settings
 ========================
 
-``rgw crypt vault auth```
+``rgw crypt vault auth``
 
 :Description: Type of authentication method to be used. The only method
               currently supported is ``token``.
