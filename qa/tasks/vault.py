@@ -146,7 +146,7 @@ def send_req(ctx, cconfig, client, path, body, method='POST'):
     host, port = ctx.vault.endpoints[client]
     req = httplib.HTTPConnection(host, port, timeout=30)
     token = cconfig.get('root_token', 'atoken')
-    log.info("Send request to Vault: %s:%s with token: %s", host, port, token)
+    log.info("Send request to Vault: %s:%s at %s with token: %s", host, port, path, token)
     headers = {'X-Vault-Token': token}
     req.request(method, path, headers=headers, body=body)
     resp = req.getresponse()
